@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio</title>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+        <!-- Our CSS -->
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <!-- COMPONENT: Nav -->
+        <header id="nav">
+            <nav>
+                <a href="/" class="logo" aria-label="home">M</a>
+
+                <ol>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#jobs">Experience</a></li>
+                    <li><a href="#projects">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ol>
+
+                <a href="https://drive.google.com/file/d/17Jf2F2EftuWDHORo6_UwWaaiqATbYDhW/view" class="resume-button" target="_blank" rel="noreferrer">Resume</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- COMPONENT: About -->
+            <section id="about">
+                <h2 class="numbered-heading"><span>01.</span> About Me</h2>
+
+                <div class="inner">
+                    <div class="about-text">
+                        <p>I'm Yash Singhal, an IT Undergraduate from Maharaja Agrasen Institute of Technology Delhi. Full stack Web Developer and Open Source Contributor.</p>
+
+                        <p>Here are a few technologies I've been working with recently:</p>
+
+                        <ul class="skills-list">
+                            <li>JavaScript (ES6+)</li>
+                            <li>React</li>
+                            <li>Node.js</li>
+                            <li>Express</li>
+                            <li>TypeScript</li>
+                            <li>Next</li>
+                        </ul>
+                    </div>
+
+                    <div class="about-pic">
+                        <div class="wrapper">
+                            <img src="assets/yash.jpg" alt="Yash Singhal headshot" width="300" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- COMPONENT: Jobs -->
+            <section id="jobs">
+                <h2 class="numbered-heading"><span>02.</span> Where I've Worked</h2>
+
+                <div class="inner">
+                    <div class="tab-list" role="tablist">
+                        <button class="tab-button active" data-tab="0">VibeSea</button>
+                        <button class="tab-button" data-tab="1">Chabbhikar</button>
+                        <button class="tab-button" data-tab="2">CrossTower</button>
+                    </div>
+
+                    <div class="tab-panels">
+                        <div class="tab-panel active" data-panel="0">
+                            <h3>SDE Intern <span class="company">@ VibeSea</span></h3>
+                            <p class="range">Feb 2024 - Present</p>
+                            <ul>
+                                <li>Developing UI with React.js</li>
+                                <li>Building RESTful APIs with Node.js and Express</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-panel" data-panel="1" hidden>
+                            <h3>SDE Intern <span class="company">@ Chabbhikar</span></h3>
+                            <p class="range">May - October 2023</p>
+                            <ul>
+                                <li>Created features for Chabbhikar's web app</li>
+                                <li>Back-end work with Node.js and Express</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-panel" data-panel="2" hidden>
+                            <h3>SDE Intern <span class="company">@ CrossTower</span></h3>
+                            <p class="range">September - December 2022</p>
+                            <ul>
+                                <li>Responsive UI with React.js for fintech tools</li>
+                                <li>Integrated real-time data feeds and trading APIs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- COMPONENT: Projects -->
+            <section id="projects">
+                <h2 class="projects-title">Some Milestones I've Achieved</h2>
+
+                <ul class="projects-grid">
+                    <li class="project-card">
+                        <h3>Campus Kart</h3>
+                        <p>Platform for college.</p>
+                        <ul class="project-tech">
+                            <li>ReactJS</li>
+                            <li>NodeJS</li>
+                            <li>MongoDB</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://uskart.co/" target="_blank" rel="noreferrer">Live</a>
+                            <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+                        </div>
+                    </li>
+
+                    <li class="project-card">
+                        <h3>React Profile</h3>
+                        <p>Online resume built to learn React.js.</p>
+                        <ul class="project-tech">
+                            <li>React</li>
+                            <li>CSS</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://bchiang7.github.io/react-profile/" target="_blank" rel="noreferrer">Live</a>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <!-- COMPONENT: Footer -->
+        <footer>
+            <a href="https://github.com/yash-25log" target="_blank" rel="noreferrer">YASH SINGHAL</a>
+        </footer>
+    </body>
+
+</html>
