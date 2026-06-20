@@ -90,3 +90,116 @@ h1, h2, h3 {
 
 
 
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 50px;
+}
+.logo {
+    color: var(--green);
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+#inner-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+#inner-nav a:not(.resume-button) {
+    color: var(--lightest-slate);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: var(--transition);
+}
+#inner-nav a:not(.resume-button):hover {
+    color: var(--green);
+}
+.resume-button {
+    color: var(--green);
+    background-color: transparent;
+    border: 1px solid var(--green);
+    border-radius: 4px;
+    padding: 0.6rem 1.2rem;
+    font-family: var(--font-mono);
+}
+
+#hero {
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 50px;
+    max-width: 1000px;
+}
+
+#hero h2 {
+    color: var(--slate);
+}
+
+.hero-desc {
+    max-width: 540px;
+    margin-top: 20px;
+    font-size: 18px;
+    color: var(--slate);
+}
+
+.email-link {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 18px 28px;
+    border: 1px solid var(--green);
+    border-radius: 4px;
+    color: var(--green);
+    font-family: var(--font-mono);
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.email-link:hover {
+    background-color: var(--green-tint);
+}
+
+
+/* ── TYPOGRAPHY ── */
+.big-heading {
+    font-size: clamp(40px, 8vw, 80px);
+    color: var(--lightest-slate);
+    line-height: 1.1;
+}
+
+.overline {
+    color: var(--green);
+    font-family: var(--font-mono);
+    font-size: 14px;
+    margin-bottom: 20px;
+
+}
+
+.numbered-heading {
+    display: flex;
+    align-items: center;
+    color: var(--lightest-slate);
+    font-size: clamp(26px, 5vw, 32px);
+    white-space: nowrap;
+    margin-bottom: 40px;
+    
+}
+
+.numbered-heading span {
+    color: var(--green);
+    font-family: var(--font-mono);
+    font-size: clamp(16px, 3vw, 20px);
+    font-weight: 400;
+    margin-right: 10px;
+}
+
+
+
+
+
+
