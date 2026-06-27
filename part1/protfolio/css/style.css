@@ -109,12 +109,50 @@ h3 {
 
 
 #nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+    position: fixed;
+    /** stick to browser window, not the page */
+
+    top: 0;
+
     width: 100%;
-    padding: 50px;
+
+    height: var(--nav-height);
+
+    padding: 0 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: rgba(10, 25, 47, 0.85);
+    /** semi-transparent navy */
+
+    backdrop-filter: blur(10px);
+    /** frosted glass blur */
+
+    z-index: 11;
+    /** sits on top of all other elements */
+
+    transition: var(--transition);
+
 }
+
+#nav nav {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    width: 100%;
+
+}
+
+
 
 .logo {
     color: var(--green);
@@ -156,6 +194,7 @@ h3 {
     flex-direction: column;
     justify-content: center;
     padding: 0 50px;
+    margin-top: 50px;
     max-width: 1000px;
 }
 
@@ -414,3 +453,143 @@ h3 {
 .project-links a {
     font-family: var(--font-mono);
 }
+/* ── SOCIAL SIDEBAR (left) ── */
+
+.social-sidebar {
+
+  position: fixed;
+
+  bottom: 0;
+
+  left: 40px;
+
+  z-index: 10;
+
+}
+
+ 
+
+.social-sidebar ul {
+
+  list-style: none;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 20px;
+
+}
+
+ 
+
+.social-sidebar a {
+
+  font-family: var(--font-mono);
+
+  font-size: 12px;
+
+  color: var(--light-slate);
+
+  padding: 10px;
+
+  letter-spacing: 0.1em;
+
+}
+.social-sidebar a:hover {
+
+  color: var(--green);
+
+  transform: translateY(-3px);
+
+}
+
+ 
+
+.social-sidebar::after {
+
+  content: '';            /* CSS-generated element — no HTML needed */
+
+  display: block;
+
+  width: 1px;
+
+  height: 90px;           /* the vertical line */
+
+  background: var(--light-slate);
+
+  margin: 0 auto;
+
+}
+
+ 
+
+/* ── EMAIL SIDEBAR (right) ── */
+
+.email-sidebar {
+
+  position: fixed;
+
+  bottom: 0;
+
+  right: 40px;
+
+  z-index: 10;
+
+}
+
+ 
+
+.email-sidebar a {
+
+  writing-mode: vertical-rl;   /* text runs top → bottom */
+
+  font-family: var(--font-mono);
+
+  font-size: 12px;
+
+  color: var(--light-slate);
+
+  letter-spacing: 0.1em;
+
+  transition: var(--transition);
+
+}
+
+ 
+
+.email-sidebar a:hover {
+
+  color: var(--green);
+
+  transform: translateY(-3px);
+
+}
+
+ 
+
+.email-sidebar::after {
+
+  content: '';
+
+  display: block;
+
+  width: 1px;
+
+  height: 90px;
+
+  background: var(--light-slate);
+
+  margin: 0 auto;
+
+}
+
+
+
+
+
+
+
+
