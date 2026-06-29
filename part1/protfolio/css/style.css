@@ -42,9 +42,322 @@
 
 
 
+
+/* ── HAMBURGER BUTTON ── */
+
+.menu-button {
+
+    display: none;           /* hidden on desktop */
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    background: transparent;
+
+    border: none;
+
+    cursor: pointer;
+
+    padding: 5px;
+
+}
+.menu-close {
+
+    position: absolute;
+
+    top: 1.5rem;
+
+    right: 1.5rem;
+
+    background: transparent;
+
+    border: none;
+
+    color: var(--green);
+
+    font-size: 1.8rem;
+
+    cursor: pointer;
+
+    line-height: 1;
+
+}
+
+ 
+
+/* ── MOBILE @media ── */
+
+@media (max-width: 768px) {
+
+    #inner-nav        { display: none; }   /* hide desktop links */
+
+    .menu-button      { display: flex; }   /* show hamburger */
+
+ 
+
+    .social-sidebar,
+
+    .email-sidebar    { display: none; }   /* hide sidebars */
+
+ 
+
+    #nav              { padding: 0 25px; }
+
+    #hero             { padding: 0 25px; min-height: 80vh; }
+
+    #about            { padding: 60px 25px; }
+
+    #about .inner     { display: block; }
+
+    #jobs             { padding: 60px 25px; }
+
+    #jobs .inner      { flex-direction: column; }
+
+    #projects         { padding: 60px 25px; }
+
+    #contact          { padding: 60px 25px; }
+
+}
+
+
+.mobile-menu ol li {
+
+    counter-increment: item;
+
+    font-family: var(--font-mono);
+
+    font-size: .9rem;
+
+}
+
+ 
+
+.mobile-menu ol li a::before {
+
+    content: '0' counter(item) '.';
+
+    color: var(--green);
+
+    display: block;
+
+    font-size: .75rem;
+
+    text-align: center;
+
+    margin-bottom: 4px;
+
+}
+
+ 
+
+.mobile-menu ol li a {
+
+    color: var(--lightest-slate);
+
+    font-size: 1.1rem;
+
+    font-family: var(--font-sans);
+
+    display: block;
+
+    text-align: center;
+
+}
+
+ 
+
+.mobile-menu ol li a:hover { color: var(--green); }
+
+
+
+
+.menu-close {
+
+    position: absolute;
+
+    top: 1.5rem;
+
+    right: 1.5rem;
+
+    background: transparent;
+
+    border: none;
+
+    color: var(--green);
+
+    font-size: 1.8rem;
+
+    cursor: pointer;
+
+    line-height: 1;
+
+}
+
+ 
+
+/* ── MOBILE @media ── */
+
+@media (max-width: 768px) {
+
+    #inner-nav        { display: none; }   /* hide desktop links */
+
+    .menu-button      { display: flex; }   /* show hamburger */
+
+ 
+
+    .social-sidebar,
+
+    .email-sidebar    { display: none; }   /* hide sidebars */
+
+ 
+
+    #nav              { padding: 0 25px; }
+
+    #hero             { padding: 0 25px; min-height: 80vh; }
+
+    #about            { padding: 60px 25px; }
+
+    #about .inner     { display: block; }
+
+    #jobs             { padding: 60px 25px; }
+
+    #jobs .inner      { flex-direction: column; }
+
+    #projects         { padding: 60px 25px; }
+
+    #contact          { padding: 60px 25px; }
+
+}
+
+
+
+/* ── HAMBURGER BUTTON ── */
+
+.menu-button {
+
+    display: none;           /* hidden on desktop */
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    background: transparent;
+
+    border: none;
+
+    cursor: pointer;
+
+    padding: 5px;
+
+}
+
+ 
+
+.menu-button span {
+
+    display: block;
+
+    width: 30px;
+
+    height: 2px;
+
+    background: var(--green);
+
+    border-radius: 2px;
+
+    transition: var(--transition);
+
+}
+
+
+
+
+
+
+
+
+ 
+
+.menu-button span {
+
+    display: block;
+
+    width: 30px;
+
+    height: 2px;
+
+    background: var(--green);
+
+    border-radius: 2px;
+
+    transition: var(--transition);
+
+}
+
+
+
+
+
+
+
+
+
 html {
     font-size: 16px;
+   
+    scroll-behavior: smooth;
+
+    scroll-padding-top: var(--nav-height);
+
 }
+.about-pic .wrapper {
+
+    position: relative;
+
+    background: var(--green);   /* green layer behind the photo */
+
+    border-radius: 4px;
+
+    max-width: 300px;
+
+}
+
+ 
+
+.about-pic img {
+
+    border-radius: 4px;
+
+    width: 100%;
+
+    display: block;
+
+    filter: grayscale(100%);    /* removes photo colour */
+
+    mix-blend-mode: multiply;   /* blends with green background */
+
+    transition: var(--transition);
+
+}
+
+ 
+
+.about-pic .wrapper:hover img {
+
+    filter: none;               /* colour returns on hover */
+
+    mix-blend-mode: normal;
+
+}
+
+
+
+
 
 
 
@@ -383,6 +696,36 @@ h3 {
     display: flex;
     flex-direction: column;
 }
+.tab-panel ul li {
+
+    position: relative;
+
+    padding-left: 30px;
+
+    font-size: 15px;
+
+    margin-bottom: 10px;
+
+}
+
+ 
+
+.tab-panel ul li::before {
+
+    content: '▹';
+
+    position: absolute;
+
+    left: 0;
+
+    color: var(--green);
+
+}
+
+
+
+
+
 
 /* ── PROJECTS ── */
 #projects {
@@ -589,6 +932,42 @@ h3 {
 
 
 
+
+
+
+
+
+/* ── FOOTER ── */
+
+footer {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 15px;
+
+}
+
+ 
+
+footer a {
+
+    font-family: var(--font-mono);
+
+    font-size: 12px;
+
+    color: var(--light-slate);
+
+    letter-spacing: 0.1em;
+
+}
+
+ 
+
+footer a:hover { color: var(--green); }
 
 
 
